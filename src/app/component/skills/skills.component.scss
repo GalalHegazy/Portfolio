@@ -1,0 +1,141 @@
+@import "../personal/personal.component.scss";
+@import "../contacts/contacts.component.scss";
+
+.welcome-skills{
+    span{
+        color:$text3-color ;
+    }
+}
+// ==================================================//
+.skills-card{
+    background-color: $decoration-bg ;
+    width: 85%;
+    span{
+        color: $text-color;
+    }
+}
+// ============================================//
+
+.speak-card{
+    background-color: $decoration-bg ;
+    div{
+        span{
+            color: $text-color;
+        }
+    }
+    span{
+        color: $text-color;
+        
+    }
+}
+.card-arabic-arrow{
+    position: relative;
+    ::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-left: 15px solid $decoration-bg;
+        transform: translate(0, -50%);
+    }
+}
+.card-english-arrow{
+    position: relative;
+    ::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent ;
+        border-right: 15px solid  $decoration-bg;
+        border-left: 15px solid transparent ;
+        transform: translate(0, -50%);
+    }
+}
+// =================================//
+.Soft-Skills-card{
+    div{
+        width:85% ;
+        background-color: $decoration-bg;
+        i{
+            color:$text3-color ;
+        }
+        span{
+            color: $text-color;
+
+        }
+        .Technical-title{
+            color: $text2-color;
+        }
+    }
+}
+
+  
+
+@media only screen and (max-width: 991px) {
+    .welcome-skills{
+        span{
+            font-size: 27px !important;
+        }
+    }
+
+    .speak-card{
+     
+        padding-top: 10px;
+        padding-bottom: 10px;
+        div{
+            span{
+                color: $text-color;
+            }
+        }
+        span{
+            color: $text-color;
+            
+        }
+        .english-speak{
+            font-size: 15px !important;
+            
+        }
+    }
+
+    .speak-logo{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .card-arabic-arrow{
+        position: relative;
+      
+        ::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-left: 15px solid $decoration-bg;
+            transform: translate(-50%, 0 ) rotate(90deg);
+        }
+    }
+    .card-english-arrow{
+        position: relative;
+        ::after {
+            content: '';
+            position: absolute;
+            top: 0 ;
+            left: 50%;
+            border-top:15px solid transparent ;
+            border-bottom: 15px solid transparent ;
+            border-right: 15px solid  transparent;
+            border-left: 15px solid  $decoration-bg;
+            transform: translate(-50%, -100%) rotate( -90deg );
+        }
+    }
+
+
+}

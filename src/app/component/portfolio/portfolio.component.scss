@@ -1,0 +1,43 @@
+@import "../personal/personal.component.scss";
+@import "../contacts/contacts.component.scss";
+
+.portfolio-text{
+    span{
+        color:$text3-color ;
+    }
+    p{
+        color: $text-color;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .portfolio-content-resp{
+        display: flex;
+        flex-direction: column-reverse;
+
+        .portfolio-img-resp{
+                img{ 
+                    width: 50%; 
+                    min-width: 200px; 
+                }
+        
+        }
+    }
+    .portfolio-text{
+        margin-top: 20px;
+        text-align: center !important;
+        span{
+            font-size: 20px !important;
+        }
+        p{
+            font-size: 13px !important;
+
+        }
+    }
+
+
+
+
+
+
+}

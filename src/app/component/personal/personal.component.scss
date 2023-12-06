@@ -1,0 +1,371 @@
+@import "../../../styles.scss";
+
+
+
+
+.colse-button{
+  position: absolute;
+  z-index: 777777;
+  top: 25px;
+  right: 45px;
+  width: 35px ;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px $text3-color solid;
+  background-color:transparent;
+  transition: all 1s;
+  opacity: 1;
+  animation: 1.5s ease-out top-down-button ;
+  &:hover{
+    transform: scale(1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  &::before{
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: $text2-color;
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    rotate: 45deg;
+  }
+  &::after{
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: $text2-color;
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    rotate: -45deg;
+  }
+}
+
+
+
+// ===================================================//
+
+
+.content-page{
+    background-color:$decoration-color2;
+    position: absolute;
+    left: 15px; 
+    top: 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    overflow-x: hidden; 
+    overflow-y: auto;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.active{
+   rotate: (360deg);
+   scale: 1;
+   opacity: 1;
+   animation: 0.8s ease-in-out rotat ;
+
+}
+.backActive{
+  rotate: (-360deg);
+   scale: 1;
+   opacity: 1;
+   animation: 0.8s ease-in-out rotatBack ;
+  //  background-color: #a54e07;
+ 
+}
+//=============== welcome ====================//
+
+
+
+.welcome-text{
+    p{
+        color:$text-color ;
+        font-size: 23px;
+    }
+    span{
+        color: $text2-color ;
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+.welcome-img{
+    animation: jumping 2.5s infinite alternate;
+}
+
+
+.button-24 {
+  touch-action: manipulation;
+  display: inline-block;
+  outline: none;
+  font-family: inherit;
+  font-size: 1em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: .3em;
+  height: 2.75em;
+  line-height: 2.5em;
+  text-transform: uppercase;
+  padding: 0 1em;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+              inset 0 -2px 5px 1px rgba(139,66,8,1),
+              inset 0 -1px 1px 3px rgba(250,227,133,1);
+  background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+  border: 1px solid #a55d07;
+  color: rgba(120, 49, 5, 0.774);
+  text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  background-size: 100% 100%;
+  background-position:center;
+}
+.button-24:focus,
+.button-24:hover {
+  background-size: 150% 150%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23),
+                inset 0 -2px 5px 1px #b17d10,
+                inset 0 -1px 1px 3px rgba(250,227,133,1);
+  border: 1px solid rgba(165,93,7,.6);
+  color: rgba(120,50,5,.8);
+}
+.button-24:active {
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+              inset 0 -2px 5px 1px #b17d10,
+                inset 0 -1px 1px 3px rgba(250,227,133,1);
+}
+//===================== line-between ========================//
+.line-between span{
+  background-color: $decoration-color2;
+  position: relative;
+  color: $text-color;
+  z-index: 1;
+}
+.line-between span::before {
+  content: "";
+  width: 80vw;
+  height: 1px;
+  background-color:$decoration-color;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+// =============================== About Me ================================//
+.about-me-content{
+  text-align: center;
+  color:$text-color; 
+  text-wrap:  balance;
+      p{
+        border: 1px $decoration-color solid;
+        font-size: 19px;
+        white-space: initial;
+      }
+}
+
+      .about-details-card{
+        border: 1px $decoration-color solid;
+        background-color: #f3612328;
+      
+        i{
+          color:$text3-color ;
+          font-size: 40px;
+        }
+        span{
+          color: $text-color;
+        }
+      }
+// ======================= Learning =========================//
+.section-Learning{
+
+  .Learning-card{
+    div{
+      width:85% ;
+      background-color: $decoration-bg;
+      i{
+          color:$text3-color ;
+      }
+      span{
+          color: $text-color;
+
+      }
+  }
+
+  }
+}
+// ======================= Message form =========================//
+.Message-Me-form{
+  width: 95%;
+
+  .form-input{
+    width: 100%;
+    padding: 10px;
+    border: 2px $decoration-color solid;
+    outline: none;
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: all 1s;
+  }
+  .form-input:hover{
+    border: 2px $text3-color solid;
+
+  }
+}
+.button-36 {
+  padding: 12px 26px;
+  padding-bottom: 18px;
+  border: 0;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+  border-radius: 20px;
+  color: $text-color;
+  font-weight: bold;
+  background: $decoration-color2;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0, inset 0px -6px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 1s ;
+}
+.button-36:hover {
+  filter: brightness(0.98);
+  background-color:$text3-color ;
+  color: $decoration-color2 ;
+}
+
+.button-36:active {
+  filter: brightness(0.97);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 6px 0, inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+}
+// ===================== Animation ========================//
+@keyframes rotat {
+    0%{
+        rotate: (-360deg);
+        scale: 0;
+        opacity: 0;
+
+    }
+    100%{
+
+        rotate: (360deg);
+        scale: 1;
+        opacity: 1;
+
+    }
+
+}
+@keyframes rotatBack {
+    0%{
+        rotate: (360deg);
+        scale: 1;
+        opacity: 1;
+
+    }
+    100%{
+
+        rotate: (-360deg);
+        scale: 0;
+        opacity: 0;
+
+    }
+
+}
+@keyframes top-down-button{
+  0%{
+    
+   top: 0;
+    opacity: 0;
+
+}
+50%{
+    top: 10px; 
+    opacity: 0;
+
+}
+80%{
+    top: 15px; 
+    opacity: 0;
+
+}
+100%{
+    top: 25px; 
+    opacity: 1;
+
+}
+
+}
+
+@keyframes jumping {
+  0%{ 
+    transform: translate(0, 0); 
+  }
+  100%{ 
+    transform: translate(0, -20px); 
+  }
+}
+// ==============responsive==================//
+
+
+@media only screen and (max-width: 991px) {
+  .welcome{
+    display: flex ;
+    flex-direction:column-reverse;
+    .welcome-text{
+      margin-bottom: 10px;
+      .welcome-text-resp{
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between;
+        width: 100%;
+        .text-resp{
+          width: 50%;
+        }
+        .button-resp{
+          width: 40%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        } 
+      }
+    }
+    .welcome-img{
+      img{
+        width: 300px;
+      
+      }
+      
+    }
+   
+  }
+
+}
+@media only screen and (max-width: 767px) {
+  .welcome{
+    display: flex ;
+    flex-direction:column-reverse;
+    .welcome-text{
+      .welcome-text-resp{
+        display: flex;
+        flex-direction: column !important ;
+        width: 100%;
+        .text-resp{
+          width: 100%;
+        }
+        .button-resp{
+          width: 100%;
+        }
+      }
+    }
+    }
+    .welcome-img{
+      margin-bottom: 5px;
+      img{
+        width: 275px !important;
+      } 
+    }
+  }
+

@@ -1,0 +1,272 @@
+@import "../../../styles.scss";
+
+
+section{
+    background-image: url(../../../assets/img/my-img/logo1.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: 200px;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+.home{
+    .home-img{
+        position: absolute;
+        width: 550px;
+        height: 550px;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         overflow: hidden;
+         animation: .6s ease-out img-left ;
+         
+         .over-lay{
+            width: 86%;
+            height: 86%;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+         }
+         img{
+            width: 320px;
+            height: 355px;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+           
+         }
+         .my-img{
+            mix-blend-mode: screen;
+            transform-origin: 0 0;
+            scale: 1.12;
+            padding-top: 19px;
+            border-radius: 30%;
+         }
+         .img-layout{
+            transform-origin: 0 0;
+            animation: rotate 120s infinite linear;
+            animation-play-state: paused;
+            animation-play-state: running;
+         }
+    }
+}
+.home-nav{
+    width: 500px; 
+    height: 469px;
+    position: absolute; 
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transform-origin: 0 0;
+    animation: rotate 120s infinite linear, navs 1.5s ease-in-out ;
+    animation-play-state: paused;
+    .home-nav.animated{
+        animation-play-state: running;
+    }
+}
+.home-nav.animated{
+    animation-play-state: running;
+}
+
+.home-nav .column{
+    width: 100px; 
+    height: 100%;
+    position: absolute;
+    
+}
+.home-nav .column:nth-child(1) {
+    left: 50%; top: 0;
+    transform: translate(-50%, 0) rotate(330deg);
+}
+.home-nav .column:nth-child(1) .nav-button{
+    transform: rotate(30deg);
+}
+.home-nav .column:nth-child(2) {
+    left: 50%; 
+    top: 0;
+    transform: translate(-50%, 0) rotate(30deg);
+}
+.home-nav .column:nth-child(2) .nav-button{
+    transform: rotate(-30deg);
+}
+.home-nav .column:nth-child(3) {
+    left: 50%; 
+    top: 0;
+    transform: translate(-50%, 0) 
+    rotate(90deg);
+}
+.home-nav .column:nth-child(3) .nav-button{
+    transform: rotate(-90deg);
+}
+
+.home-nav .column .nav-button:first-child{ 
+    position: absolute; 
+    top: 0; 
+}
+.home-nav .column .nav-button:last-child{ 
+    position: absolute; 
+    bottom: 0; 
+}
+.home-nav .column .nav-button{
+    width: 90px; 
+    height: 90px;
+    aspect-ratio: 1/1; 
+    overflow: hidden;
+    border-radius: 50%; 
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    position: relative; 
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s;
+    animation: rotate-reverse 120s infinite linear;
+    animation-play-state: paused;
+}
+.home-nav.animated .column .nav-button{
+    animation-play-state: running;
+}
+.home-nav .column .nav-button:hover{
+    border: 4px $text3-color solid;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.home-nav .column .nav-button img,i{
+    width: 30px; 
+    filter: opacity(60%);
+ 
+ 
+}
+.home-nav .column .nav-button span{
+   
+    font-weight: bolder;
+    font-size: 12px;
+    padding-top: 5px;
+    color: $text-color;
+}
+
+
+// ==================animation========================//
+@keyframes rotate {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+@keyframes rotate-reverse {
+    0%{
+        rotate: 360deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes navs {
+    0% {
+        height: 91px;
+        opacity: 0;
+        
+      }
+      100% {
+        height:469px ;
+        opacity: 1;
+        
+      }
+
+}
+@keyframes img-left {
+    0% {
+        opacity: 0;
+        left:-50%;
+      }
+      100% {
+        opacity: 1;
+        left:50%;
+      }
+
+}
+
+// ==================responsive========================//
+
+@media only screen and (max-width: 700px) {
+    .home-nav{ 
+        scale: 0.8; 
+    }
+    .home-img{ 
+        transform-origin: 0 0; 
+        scale: 0.8; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+

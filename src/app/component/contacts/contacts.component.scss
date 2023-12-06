@@ -1,0 +1,101 @@
+@import "../personal/personal.component.scss";
+
+
+
+.welcome-contact{
+
+    .contact-text{
+        :first-child{
+            color: $text3-color ;
+        }
+        :last-child{
+        color: $text-color;
+        }
+    }
+    
+
+    
+}
+#contact-button{
+    a{
+    border: 1px $text3-color solid ;
+    background-color: $decoration-color2;
+    transition: all 0.5s ease;  
+    text-decoration: none;
+    color: $text3-color;  
+    }
+    :hover{
+    background-color: $text3-color;
+    color: $decoration-color2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    } 
+}
+#arrow-down{
+    animation: scroll-down 1.6s infinite ease-out;
+    i{
+        color:$text3-color ;
+    }
+
+}
+
+.Contact-card{
+    a{
+        .icon{
+            i{
+                font-size: 70px;
+            }
+            .fa-whatsapp{
+                color: #25D366;
+            }
+            .fa-github{
+                color: black ;
+            }
+            .fa-instagram{
+                color: #333;
+
+            }
+
+         span{
+           color: $text-color;
+          }
+
+        }
+    }
+}
+
+@keyframes scroll-down{
+    0%{
+        translate: 0 0;
+
+    }
+    70%{
+        translate: 0 30px;
+    }
+    0%{
+        translate: 0 0;
+
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .welcome-contact{
+
+        img{
+            width: 200px;
+        }
+    }
+    .contact-text{
+        :first-child{
+            color: $text3-color ;
+            font-size: 25px !important;
+        }
+        :last-child{
+        color: $text-color;
+        font-size: 20px !important;
+        }
+    }
+
+
+}
+
